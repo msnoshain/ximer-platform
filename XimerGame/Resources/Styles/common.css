@@ -1,0 +1,26 @@
+﻿.m20 {
+    margin: 36, 20;
+}
+
+.char-lim32 {
+    -maui-max-length: 3;
+}
+
+.error-text {
+    color: red;
+    font-size: 12;
+    opacity: 0.85;
+}
+
+.font-big {
+    font-size: 20;
+}
+
+.font-med {
+    font-size: 16;
+}
+
+.font-small {
+    font-size: 14;
+}
+
