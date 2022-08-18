@@ -7,11 +7,6 @@
     xmlns:account="clr-namespace:XimerGameClient.Views.Account"
     xmlns:common="clr-namespace:XimerGameClient.Views.Common">
 
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
-
     <ShellContent
         Title="LoadingPage"
         ContentTemplate="{DataTemplate common:LoadingPage}"

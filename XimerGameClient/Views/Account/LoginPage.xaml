@@ -10,52 +10,45 @@
              Title="{Binding Title}" >
 
     <ContentPage.Resources>
-        
+
         <StyleSheet Source="/Resources/Styles/common.css" />
 
     </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="128"/>
-        </Grid.RowDefinitions>
-
-        <VerticalStackLayout 
+    <VerticalStackLayout 
             MaximumWidthRequest="400"
-            Grid.Row="0">
+            VerticalOptions="CenterAndExpand">
 
-            <Image 
+        <Image 
             Source="dotnet_bot.png"
             WidthRequest="160"
             HorizontalOptions="Center"
             Margin="0,60,0,48"/>
 
-            <Entry 
+        <Entry 
             StyleClass="m20, char-lim32, font-med"
             Placeholder="账户"/>
 
-            <Entry 
+        <Entry 
             StyleClass="m20, char-lim32, font-med"
             Placeholder="密码"
             IsPassword="True"/>
 
-            <Label Text="账号或密码错误"
-               StyleClass="m20, error-text"/>
+        <Label 
+            Text="账号或密码错误"
+            StyleClass="m20, error-text"/>
 
-            <Button 
+        <Button 
             Text="登录"
             StyleClass="m20, font-med"
             WidthRequest="80"
             Command="{Binding GetTCommand}"
             CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type Shell}}}"/>
 
-        </VerticalStackLayout>
-
         <HorizontalStackLayout
             HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Grid.Row="1">
+            Margin="0,48,0,0">
+
             <Label 
                 Text="记住密码"
                 StyleClass="font-small"
@@ -63,7 +56,8 @@
 
             <CheckBox/>
 
-            
+            <Label 
+                Margin="32,0"/>
 
             <Label 
                 Text="自动登录"
@@ -73,5 +67,7 @@
             <CheckBox/>
 
         </HorizontalStackLayout>
-    </Grid>
+
+    </VerticalStackLayout>
+
 </ContentPage>
