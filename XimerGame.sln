@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XimerGame", "XimerGame\XimerGame.csproj", "{081FD925-B22E-4E50-BCEE-6BE2B5B640EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XimerGame.Shared", "XimerGame.Shared\XimerGame.Shared.csproj", "{BE3A2C64-8EB3-4878-9325-68D37B36ED1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XimerGame.Shared", "XimerGame.Shared\XimerGame.Shared.csproj", "{BE3A2C64-8EB3-4878-9325-68D37B36ED1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManualTest", "ManualTest\ManualTest.csproj", "{35A1A6C0-AEFC-4B4C-96D4-C920EAC44840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualTest", "ManualTest\ManualTest.csproj", "{35A1A6C0-AEFC-4B4C-96D4-C920EAC44840}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XimerGameClient", "XimerGameClient\XimerGameClient.csproj", "{F4457D4F-9F53-477F-8D78-D120FECF41ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,12 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{081FD925-B22E-4E50-BCEE-6BE2B5B640EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{081FD925-B22E-4E50-BCEE-6BE2B5B640EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{081FD925-B22E-4E50-BCEE-6BE2B5B640EE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{081FD925-B22E-4E50-BCEE-6BE2B5B640EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{081FD925-B22E-4E50-BCEE-6BE2B5B640EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{081FD925-B22E-4E50-BCEE-6BE2B5B640EE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{BE3A2C64-8EB3-4878-9325-68D37B36ED1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BE3A2C64-8EB3-4878-9325-68D37B36ED1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE3A2C64-8EB3-4878-9325-68D37B36ED1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,6 +23,12 @@ Global
 		{35A1A6C0-AEFC-4B4C-96D4-C920EAC44840}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35A1A6C0-AEFC-4B4C-96D4-C920EAC44840}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35A1A6C0-AEFC-4B4C-96D4-C920EAC44840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4457D4F-9F53-477F-8D78-D120FECF41ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4457D4F-9F53-477F-8D78-D120FECF41ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4457D4F-9F53-477F-8D78-D120FECF41ED}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F4457D4F-9F53-477F-8D78-D120FECF41ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4457D4F-9F53-477F-8D78-D120FECF41ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4457D4F-9F53-477F-8D78-D120FECF41ED}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
