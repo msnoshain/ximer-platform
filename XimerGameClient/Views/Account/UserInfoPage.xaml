@@ -4,29 +4,39 @@
              xmlns:vm="clr-namespace:XimerGameClient.ViewModels.Account"
              x:Class="XimerGameClient.Views.Account.UserInfoPage"
              x:DataType="vm:UserInfoViewModel"
-             Title="UserInfoPage">
-    <StackLayout 
-        VerticalOptions="Center">
+             Title="{Binding Title}">
 
-        <HorizontalStackLayout 
-            HorizontalOptions="Center">
+    <ContentPage.Resources>
 
-            <Label 
-                Text="用户名："/>
+        <StyleSheet Source="/Resources/Styles/common.css" />
 
-            <Label/>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Center">
+
+        <HorizontalStackLayout HorizontalOptions="Center"
+                               ClassId="m20">
+
+            <Label Text="账户："/>
+
+            <Label Text="{Binding CurrentUser.Account}"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="Center"
+                               ClassId="m20">
+
+            <Label Text="登录时间："/>
+
+            <Label Text="{Binding LoginTime}"/>
 
         </HorizontalStackLayout>
 
-        <HorizontalStackLayout
-            HorizontalOptions="Center">
-
-            <Label 
-                Text="登录时间："/>
-
-            <Label/>
-
-        </HorizontalStackLayout>
+        <Button Text="退出登录"
+                WidthRequest="100"
+                ClassId="m20"
+                Command="{Binding LogoutCommand}"/>
 
     </StackLayout>
+    
 </ContentPage>

@@ -1,9 +1,13 @@
-namespace XimerGameClient.ViewModels.Common;
+using XimerGameClient.ViewModels.Common;
+
+namespace XimerGameClient.Views.Common;
 
 public partial class MatchHallPage : ContentPage
 {
-	public MatchHallPage()
+	public MatchHallPage(MatchHallViewModel matchHallViewModel)
 	{
 		InitializeComponent();
-	}
+		BindingContext = matchHallViewModel;
+
+    }
 }

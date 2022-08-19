@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using XimerGame.Shared.Helpers.Abstract;
 using XimerGameClient.Models.Helpers;
+using XimerGameClient.ViewModels;
 using XimerGameClient.ViewModels.Account;
 using XimerGameClient.ViewModels.Common;
 using XimerGameClient.Views.Account;
@@ -27,7 +28,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddSingleton<LoginViewModel>();
         builder.Services.AddSingleton<GameListPage>();
-        builder.Services.AddSingleton<GameListViewModel>(); 
+        builder.Services.AddSingleton<GameListViewModel>();
+        builder.Services.AddSingleton<MatchHallPage>();
+        builder.Services.AddSingleton<MatchHallViewModel>();
         builder.Services.AddSingleton<UserInfoPage>();
         builder.Services.AddSingleton<UserInfoViewModel>();
 

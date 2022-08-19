@@ -1,4 +1,6 @@
-﻿namespace XimerGameClient
+﻿using XimerGameClient.ViewModels;
+
+namespace XimerGameClient
 {
     public partial class AppShell : Shell
     {

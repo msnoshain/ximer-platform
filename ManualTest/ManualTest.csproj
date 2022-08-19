@@ -11,4 +11,8 @@
     <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XimerGame.Shared\XimerGame.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

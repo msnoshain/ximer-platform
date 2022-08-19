@@ -1,11 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Diagnostics;
+using XimerGame.Shared.Extentions;
 using XimerGame.Shared.Helpers.Abstract;
 
 namespace XimerGameClient.ViewModels.Account;
 
-public partial class LoginViewModel : ObservableObject
+public partial class LoginViewModel : ObservableObject, IQueryAttributable
 {
     public LoginViewModel(IAccountHelper accountHelper, IConfigurationHelper configurationHelper)
     {
@@ -30,17 +31,27 @@ public partial class LoginViewModel : ObservableObject
     string errorText = string.Empty;
 
     [ObservableProperty]
-    bool rememberPassword=false;
+    bool rememberPassword = false;
 
-    [ObservableProperty]
-    bool autoLogin=false;
+    private bool autoLogin = false;
+
+    public bool AutoLogin
+    {
+        get => autoLogin;
+        set
+        {
+            SetProperty(ref autoLogin, value);
+            if (value) RememberPassword = true;
+        }
+    }
+
 
     [RelayCommand]
     async Task LoginAsync()
     {
         ErrorText = string.Empty;
 
-        var loginResult = await AccountHelper.LoginAsync(account, password);
+        var loginResult = await AccountHelper.LoginAsync(Account, Password);
 
         if (!loginResult.Succeed)
         {
@@ -51,5 +62,12 @@ public partial class LoginViewModel : ObservableObject
         ConfigurationHelper.LoginForm = (Account, Password, RememberPassword, AutoLogin);
 
         await Shell.Current.GoToAsync("///GameListPage");
+    }
+
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
+    {
+        var form = (query["LoginForm"] as (string acct, string psd, bool rem, bool auto)?).Value;
+
+        (Account, Password, RememberPassword, AutoLogin) = form;
     }
 }

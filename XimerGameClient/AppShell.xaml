@@ -11,13 +11,15 @@
         Title="LoadingPage"
         ContentTemplate="{DataTemplate common:LoadingPage}"
         Route="LoadingPage" 
-        FlyoutItemIsVisible="False"/>
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
     <ShellContent
         Title="登录"
         ContentTemplate="{DataTemplate account:LoginPage}"
         Route="LoginPage" 
-        FlyoutItemIsVisible="False"/>
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"/>
 
     <FlyoutItem 
         FlyoutDisplayOptions="AsMultipleItems">

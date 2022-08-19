@@ -14,10 +14,21 @@ public class AccountHelper : IAccountHelper
         if(ValidationHelper.TryValidate(typeof(AccountValidator), out _, account) &&
            ValidationHelper.TryValidate(typeof(PasswordValidator), out _, password))
 
+        {
+            //获取user信息
+            var user = new User()
+            {
+                Account = account,
+                Password= password,
+            };
+
+            GlobalStateManager.CurrentUser = user;
+
             return new ResultWithContent<object>()
             {
                 StatusCode = Code.Succeed,
             };
+        }
 
         return new ResultWithContent<object>()
         {
@@ -28,7 +39,7 @@ public class AccountHelper : IAccountHelper
 
     public async Task<Result> LogoutAsync(string account, string password)
     {
-        throw new NotImplementedException();
+        return new Result();
     }
 
     public async Task<ResultWithContent<object>> RegisterAsync(User user)
