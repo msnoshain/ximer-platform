@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace XimerGameClient
+namespace XimerGame.Client
 {
     public class Program
     {

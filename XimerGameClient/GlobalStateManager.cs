@@ -1,6 +1,6 @@
 ﻿using XimerGame.Shared.Models.Entities;
 
-namespace XimerGameClient;
+namespace XimerGame.Client;
 
 public static class GlobalStateManager
 {

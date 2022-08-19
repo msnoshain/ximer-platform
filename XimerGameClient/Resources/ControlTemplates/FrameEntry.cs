@@ -1,4 +1,4 @@
-﻿namespace XimerGameClient.Resources.ControlTemplates;
+﻿namespace XimerGame.Client.Resources.ControlTemplates;
 
 public partial class FrameEntry : ContentView
 {

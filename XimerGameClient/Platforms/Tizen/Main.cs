@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace XimerGameClient
+namespace XimerGame.Client
 {
     internal class Program : MauiApplication
     {

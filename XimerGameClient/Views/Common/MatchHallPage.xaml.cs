@@ -1,6 +1,6 @@
-using XimerGameClient.ViewModels.Common;
+using XimerGame.Client.ViewModels.Common;
 
-namespace XimerGameClient.Views.Common;
+namespace XimerGame.Client.Views.Common;
 
 public partial class MatchHallPage : ContentPage
 {

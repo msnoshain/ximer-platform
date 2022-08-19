@@ -1,6 +1,6 @@
-using XimerGameClient.ViewModels.Account;
+using XimerGame.Client.ViewModels.Account;
 
-namespace XimerGameClient.Views.Account;
+namespace XimerGame.Client.Views.Account;
 
 public partial class UserInfoPage : ContentPage
 {

@@ -1,8 +1,8 @@
 using XimerGame.Shared.Extentions;
-using XimerGameClient.Resources.ControlTemplates;
-using XimerGameClient.ViewModels.Account;
+using XimerGame.Client.Resources.ControlTemplates;
+using XimerGame.Client.ViewModels.Account;
 
-namespace XimerGameClient.Views.Account;
+namespace XimerGame.Client.Views.Account;
 
 //[QueryProperty(nameof(LoginForm), "LoginForm")]
 public partial class LoginPage : ContentPage

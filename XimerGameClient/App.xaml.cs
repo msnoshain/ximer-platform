@@ -1,4 +1,4 @@
-﻿namespace XimerGameClient
+﻿namespace XimerGame.Client
 {
     public partial class App : Application
     {

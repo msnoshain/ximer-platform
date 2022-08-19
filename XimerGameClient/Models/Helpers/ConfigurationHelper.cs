@@ -1,6 +1,6 @@
 ﻿using XimerGame.Shared.Helpers.Abstract;
 
-namespace XimerGameClient.Models.Helpers;
+namespace XimerGame.Client.Models.Helpers;
 
 public class ConfigurationHelper : IConfigurationHelper
 {

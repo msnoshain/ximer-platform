@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace XimerGameClient.ViewModels.Common;
+namespace XimerGame.Client.ViewModels.Common;
 
 public partial class GameListViewModel : ObservableObject
 {

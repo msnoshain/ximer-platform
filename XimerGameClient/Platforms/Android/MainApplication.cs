@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace XimerGameClient
+namespace XimerGame.Client
 {
     [Application]
     public class MainApplication : MauiApplication

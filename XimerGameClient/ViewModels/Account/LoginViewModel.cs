@@ -4,7 +4,7 @@ using System.Diagnostics;
 using XimerGame.Shared.Extentions;
 using XimerGame.Shared.Helpers.Abstract;
 
-namespace XimerGameClient.ViewModels.Account;
+namespace XimerGame.Client.ViewModels.Account;
 
 public partial class LoginViewModel : ObservableObject, IQueryAttributable
 {

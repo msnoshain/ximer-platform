@@ -5,7 +5,7 @@ using XimerGame.Shared.Models.Enums;
 using XimerGame.Shared.Models.Results;
 using XimerGame.Shared.Validators;
 
-namespace XimerGameClient.Models.Helpers;
+namespace XimerGame.Client.Models.Helpers;
 
 public class AccountHelper : IAccountHelper
 {

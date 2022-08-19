@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using XimerGame.Shared.Helpers.Abstract;
 
-namespace XimerGameClient.ViewModels.Common;
+namespace XimerGame.Client.ViewModels.Common;
 
 public partial class LoadingViewModel : ObservableObject
 {

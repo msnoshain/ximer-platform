@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace XimerGameClient
+namespace XimerGame.Client
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

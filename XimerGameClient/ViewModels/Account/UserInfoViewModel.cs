@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using XimerGame.Shared.Helpers.Abstract;
 using XimerGame.Shared.Models.Entities;
 
-namespace XimerGameClient.ViewModels.Account;
+namespace XimerGame.Client.ViewModels.Account;
 
 public partial class UserInfoViewModel : ObservableObject
 {

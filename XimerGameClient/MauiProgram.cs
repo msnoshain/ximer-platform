@@ -1,13 +1,12 @@
 ﻿using CommunityToolkit.Maui;
 using XimerGame.Shared.Helpers.Abstract;
-using XimerGameClient.Models.Helpers;
-using XimerGameClient.ViewModels;
-using XimerGameClient.ViewModels.Account;
-using XimerGameClient.ViewModels.Common;
-using XimerGameClient.Views.Account;
-using XimerGameClient.Views.Common;
+using XimerGame.Client.Models.Helpers;
+using XimerGame.Client.ViewModels.Account;
+using XimerGame.Client.ViewModels.Common;
+using XimerGame.Client.Views.Account;
+using XimerGame.Client.Views.Common;
 
-namespace XimerGameClient;
+namespace XimerGame.Client;
 
 public static class MauiProgram
 {

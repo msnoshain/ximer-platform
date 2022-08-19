@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XimerGame.Shared", "XimerGa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManualTest", "ManualTest\ManualTest.csproj", "{35A1A6C0-AEFC-4B4C-96D4-C920EAC44840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XimerGameClient", "XimerGameClient\XimerGameClient.csproj", "{F4457D4F-9F53-477F-8D78-D120FECF41ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XimerGame.Client", "XimerGameClient\XimerGame.Client.csproj", "{F4457D4F-9F53-477F-8D78-D120FECF41ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
