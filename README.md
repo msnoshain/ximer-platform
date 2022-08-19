@@ -1,2 +1,2 @@
-# Ximer Game
+# Ximer Game Platform
  under development...
