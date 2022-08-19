@@ -26,6 +26,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<LoadingViewModel>();
         builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddSingleton<LoginViewModel>();
+        builder.Services.AddSingleton<GameListPage>();
+        builder.Services.AddSingleton<GameListViewModel>(); 
+        builder.Services.AddSingleton<UserInfoPage>();
+        builder.Services.AddSingleton<UserInfoViewModel>();
 
         builder.Services.AddSingleton<IAccountHelper, AccountHelper>();
         builder.Services.AddSingleton<IConfigurationHelper, ConfigurationHelper>();

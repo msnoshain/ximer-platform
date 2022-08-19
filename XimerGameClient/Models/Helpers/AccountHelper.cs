@@ -1,32 +1,47 @@
-﻿using XimerGame.Shared.Helpers.Abstract;
+﻿using XimerGame.Shared.Helpers;
+using XimerGame.Shared.Helpers.Abstract;
 using XimerGame.Shared.Models.Entities;
+using XimerGame.Shared.Models.Enums;
 using XimerGame.Shared.Models.Results;
+using XimerGame.Shared.Validators;
 
 namespace XimerGameClient.Models.Helpers;
 
 public class AccountHelper : IAccountHelper
 {
-    public Task<ResultWithContent<object>> LoginAsync(string account, string password)
+    public async Task<ResultWithContent<object>> LoginAsync(string account, string password)
+    {
+        if(ValidationHelper.TryValidate(typeof(AccountValidator), out _, account) &&
+           ValidationHelper.TryValidate(typeof(PasswordValidator), out _, password))
+
+            return new ResultWithContent<object>()
+            {
+                StatusCode = Code.Succeed,
+            };
+
+        return new ResultWithContent<object>()
+        {
+            StatusCode = Code.IllegalArgs,
+            Message = "测试错误",
+        };
+    }
+
+    public async Task<Result> LogoutAsync(string account, string password)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Result> LogoutAsync(string account, string password)
+    public async Task<ResultWithContent<object>> RegisterAsync(User user)
     {
         throw new NotImplementedException();
     }
 
-    public Task<ResultWithContent<object>> RegisterAsync(User user)
+    public async Task<Result> UnregisterAsync(string account, string password)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Result> UnregisterAsync(string account, string password)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Result> UpdateInfoAsync(string account, string password, User newUser)
+    public async Task<Result> UpdateInfoAsync(string account, string password, User newUser)
     {
         throw new NotImplementedException();
     }

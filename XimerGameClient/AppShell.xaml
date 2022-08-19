@@ -13,14 +13,30 @@
         Route="LoadingPage" 
         FlyoutItemIsVisible="False"/>
 
+    <ShellContent
+        Title="登录"
+        ContentTemplate="{DataTemplate account:LoginPage}"
+        Route="LoginPage" 
+        FlyoutItemIsVisible="False"/>
+
     <FlyoutItem 
         FlyoutDisplayOptions="AsMultipleItems">
 
         <ShellContent
-            Title="登录"
-            ContentTemplate="{DataTemplate account:LoginPage}"
-            Route="LoginPage" />
+            Title="游戏列表"
+            ContentTemplate="{DataTemplate common:GameListPage}"
+            Route="GameListPage" />
+
+        <ShellContent
+            Title="匹配大厅"
+            ContentTemplate="{DataTemplate common:MatchHallPage}"
+            Route="MatchHallPage" />
 
     </FlyoutItem>
+
+    <ShellContent
+        Title="我的账户"
+        ContentTemplate="{DataTemplate account:UserInfoPage}"
+        Route="UserInfoPage" />
 
 </Shell>

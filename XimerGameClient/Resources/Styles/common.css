@@ -3,7 +3,7 @@
 }
 
 .char-lim32 {
-    -maui-max-length: 3;
+    -maui-max-length: 32;
 }
 
 .error-text {

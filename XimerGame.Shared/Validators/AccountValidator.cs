@@ -7,10 +7,11 @@ namespace XimerGame.Shared.Validators;
 /// 用户名检查规则：Type=string, Length<=32
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class UsernameValidator : ISingleValueValidator<string>
+public class AccountValidator : ISingleValueValidator<string>
 {
     public void Validate(string value)
     {
+        Guard.IsNotNullOrEmpty(value);
         Guard.IsNotNullOrWhiteSpace(value);
         Guard.HasSizeLessThanOrEqualTo(value.Trim(), 32);
     }

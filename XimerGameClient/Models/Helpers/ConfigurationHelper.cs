@@ -4,10 +4,39 @@ namespace XimerGameClient.Models.Helpers;
 
 public class ConfigurationHelper : IConfigurationHelper
 {
-    public string Username { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public string Password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public bool RememberPassword { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public bool Autologin { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public (string username, string password) UserLoginInfo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public (string username, string password, bool rememberPassword, bool autoLogin) LoginForm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public string Account
+    {
+        get => Preferences.Default.Get(nameof(Account), "");
+        set => Preferences.Default.Set(nameof(Account), value);
+    }
+
+    public string Password
+    {
+        get => Preferences.Default.Get(nameof(Password), "");
+        set => Preferences.Default.Set(nameof(Password), value);
+    }
+
+    public bool RememberPassword
+    {
+        get => Preferences.Default.Get(nameof(RememberPassword), false);
+        set => Preferences.Default.Set(nameof(RememberPassword), value);
+    }
+
+    public bool Autologin
+    {
+        get => Preferences.Default.Get(nameof(Autologin), false);
+        set => Preferences.Default.Set(nameof(Autologin), value);
+    }
+
+    public (string account, string password) UserLoginInfo
+    {
+        get => (Account, Password);
+        set => (Account, Password) = value;
+    }
+
+    public (string account, string password, bool rememberPassword, bool autoLogin) LoginForm
+    {
+        get => (Account, Password, RememberPassword, Autologin);
+        set => (Account, Password, RememberPassword, Autologin) = value;
+    }
 }

@@ -4,7 +4,7 @@ namespace XimerGame.Shared.Helpers.Abstract;
 
 public interface IConfigurationHelper
 {
-    string Username { get; set; }
+    string Account { get; set; }
 
     string Password { get; set; }
 
@@ -12,8 +12,8 @@ public interface IConfigurationHelper
 
     bool Autologin { get; set; }
 
-    (string username, string password) UserLoginInfo { get; set; }
+    (string account, string password) UserLoginInfo { get; set; }
 
-    (string username, string password, bool rememberPassword, bool autoLogin) LoginForm { get; set; }
+    (string account, string password, bool rememberPassword, bool autoLogin) LoginForm { get; set; }
 
 }

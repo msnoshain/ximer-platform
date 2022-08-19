@@ -5,7 +5,6 @@
              xmlns:vm="clr-namespace:XimerGameClient.ViewModels.Account"
              xmlns:generic="clr-namespace:System.Collections.Generic;assembly=netstandard"
              x:Class="XimerGameClient.Views.Account.LoginPage"
-             x:Name="Top"
              x:DataType="vm:LoginViewModel"
              Title="{Binding Title}" >
 
@@ -27,23 +26,24 @@
 
         <Entry 
             StyleClass="m20, char-lim32, font-med"
-            Placeholder="账户"/>
+            Placeholder="账户"
+            Text="{Binding Account}"/>
 
         <Entry 
             StyleClass="m20, char-lim32, font-med"
             Placeholder="密码"
+            Text="{Binding Password}"
             IsPassword="True"/>
 
         <Label 
-            Text="账号或密码错误"
-            StyleClass="m20, error-text"/>
+            StyleClass="m20, error-text"
+            Text="{Binding ErrorText}"/>
 
         <Button 
             Text="登录"
             StyleClass="m20, font-med"
             WidthRequest="80"
-            Command="{Binding GetTCommand}"
-            CommandParameter="{Binding Source={RelativeSource AncestorType={x:Type Shell}}}"/>
+            Command="{Binding LoginCommand}"/>
 
         <HorizontalStackLayout
             HorizontalOptions="Center"
@@ -54,7 +54,8 @@
                 StyleClass="font-small"
                 VerticalTextAlignment="Center"/>
 
-            <CheckBox/>
+            <CheckBox
+                IsChecked="{Binding RememberPassword}"/>
 
             <Label 
                 Margin="32,0"/>
@@ -64,7 +65,8 @@
                 StyleClass="font-small"
                 VerticalTextAlignment="Center"/>
 
-            <CheckBox/>
+            <CheckBox
+                IsChecked="{Binding AutoLogin}"/>
 
         </HorizontalStackLayout>
 
